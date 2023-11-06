@@ -7,9 +7,7 @@ class ElevatedButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //final myModel = Provider.of<ProviderModel>(context, listen: false);
     return ChangeNotifierProvider<ProviderModel>(
-      //      <--- ChangeNotifierProvider
       create: (context) => ProviderModel(),
       child: Column(
         children: [
@@ -17,7 +15,6 @@ class ElevatedButtonWidget extends StatelessWidget {
             padding: const EdgeInsets.all(15),
             color: Colors.blue[200],
             child: Consumer<ProviderModel>(
-              //                    <--- Consumer
               builder: (context, myModel, child) {
                 return FloatingActionButton(
                   onPressed: () => myModel.changeName(),
@@ -34,7 +31,6 @@ class ElevatedButtonWidget extends StatelessWidget {
             padding: const EdgeInsets.all(15),
             color: Colors.redAccent,
             child: Consumer<ProviderModel>(
-              //                    <--- Consumer
               builder: (context, myModel, child) {
                 return Text(myModel.littleMonk);
               },

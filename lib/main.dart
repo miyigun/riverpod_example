@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_example/controller/provider_example_widger.dart';
+import 'package:riverpod_example/controller/provider_example_widget.dart';
 
 void main() {
   runApp(
